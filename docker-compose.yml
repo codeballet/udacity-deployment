@@ -37,6 +37,6 @@ services:
       - JWT_SECRET
       - URL
   frontend:
-    image: codeballet/udacity-frontend
+    image: codeballet/udacity-c2-frontend
     ports:
       - 8100:80
