@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-feed-deployment
-  labels:
-    component: backend-feed
 spec:
   replicas: 1
   selector:

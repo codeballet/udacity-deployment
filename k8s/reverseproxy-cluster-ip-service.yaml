@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: udacity-reverseproxy-cluster-ip-service
+  name: reverseproxy-cluster-ip-service
 spec:
   type: ClusterIP
   selector:
-    component: udacity-reverseproxy
+    component: reverseproxy
   ports:
     - port: 8080
       targetPort: 8080

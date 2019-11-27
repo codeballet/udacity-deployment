@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-user-deployment
-  labels:
-    component: backend-user
 spec:
   replicas: 1
   selector:
