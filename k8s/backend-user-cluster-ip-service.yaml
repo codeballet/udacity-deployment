@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-user-cluster-ip-service
+  name: backend-user
+  labels:
+    service: backend-user
 spec:
   type: ClusterIP
   selector:
-    component: backend-user
+    service: backend-user
   ports:
     - port: 8080
       targetPort: 8080

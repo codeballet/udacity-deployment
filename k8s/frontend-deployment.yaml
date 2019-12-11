@@ -2,15 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
+  labels:
+    service: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: frontend
+      service: frontend
   template:
     metadata:
       labels:
-        component: frontend
+        service: frontend
     spec:
       containers:
         - name: frontend
@@ -24,6 +26,6 @@ spec:
               memory: "1024Mi"
               cpu: "500m" 
           ports:
-            - containerPort: 8100
+            - containerPort: 80
       restartPolicy: Always
           
